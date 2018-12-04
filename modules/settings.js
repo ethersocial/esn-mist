@@ -93,7 +93,7 @@ class Settings {
   }
 
   get appName() {
-    return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Wallet';
+    return this.uiMode === 'mist' ? 'Mist' : 'ESNwallet';
   }
 
   get appLicense() {
@@ -161,13 +161,13 @@ class Settings {
     ipcPath = this.userHomePath;
 
     if (process.platform === 'darwin') {
-      ipcPath += '/Library/Ethereum/geth.ipc';
+      ipcPath += '/Library/Ethersocial/geth.ipc';
     } else if (
       process.platform === 'freebsd' ||
       process.platform === 'linux' ||
       process.platform === 'sunos'
     ) {
-      ipcPath += '/.ethereum/geth.ipc';
+      ipcPath += '/.ethersocial/geth.ipc';
     } else if (process.platform === 'win32') {
       ipcPath = '\\\\.\\pipe\\geth.ipc';
     }
@@ -357,6 +357,15 @@ const argv = require('yargs')
       demand: false,
       default: null,
       describe: 'Network to connect to: main, test',
+      requiresArg: true,
+      nargs: 1,
+      type: 'string',
+      group: 'Mist options:'
+    },
+    gcmode: {
+      demand: false,
+      default: 'archive',
+      describe: '--gcmode archive',
       requiresArg: true,
       nargs: 1,
       type: 'string',

@@ -269,7 +269,7 @@ let menuTempl = function(webviews) {
                 // geth
               } else {
                 if (process.platform === 'darwin') {
-                  userPath += '/Library/Ethereum/keystore';
+                  userPath += '/Library/Ethersocial/keystore';
                 }
 
                 if (
@@ -277,11 +277,11 @@ let menuTempl = function(webviews) {
                   process.platform === 'linux' ||
                   process.platform === 'sunos'
                 ) {
-                  userPath += '/.ethereum/keystore';
+                  userPath += '/.ethersocial/keystore';
                 }
 
                 if (process.platform === 'win32') {
-                  userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                  userPath = `${Settings.appDataPath}\\Ethersocial\\keystore`;
                 }
               }
 
@@ -539,7 +539,7 @@ let menuTempl = function(webviews) {
         }
       },
       {
-        label: 'Ropsten - Test network',
+        label: 'ESN - Test network',
         accelerator: 'CommandOrControl+Alt+2',
         checked: ethereumNode.isOwnNode && ethereumNode.network === 'test',
         enabled: ethereumNode.isOwnNode,
@@ -547,46 +547,26 @@ let menuTempl = function(webviews) {
         click() {
           restartNode(ethereumNode.type, 'test');
         }
-      },
-      {
-        label: 'Rinkeby - Test network',
-        accelerator: 'CommandOrControl+Alt+3',
-        checked: ethereumNode.isOwnNode && ethereumNode.network === 'rinkeby',
-        enabled: ethereumNode.isOwnNode,
-        type: 'checkbox',
-        click() {
-          restartNode(ethereumNode.type, 'rinkeby');
-        }
-      },
-      {
-        label: 'Solo network',
-        accelerator: 'CommandOrControl+Alt+4',
-        checked: ethereumNode.isOwnNode && ethereumNode.isDevNetwork,
-        enabled: ethereumNode.isOwnNode,
-        type: 'checkbox',
-        click() {
-          restartNode(ethereumNode.type, 'dev');
-        }
       }
     ]
   });
 
   // Light mode switch should appear when not in Solo Mode (dev network)
-  if (
-    ethereumNode.isOwnNode &&
-    ethereumNode.isGeth &&
-    !ethereumNode.isDevNetwork
-  ) {
-    devToolsMenu.push({
-      label: 'Sync with Light client (beta)',
-      enabled: true,
-      checked: ethereumNode.isLightMode,
-      type: 'checkbox',
-      click() {
-        restartNode('geth', null, ethereumNode.isLightMode ? 'fast' : 'light');
-      }
-    });
-  }
+  // if (
+  //   ethereumNode.isOwnNode &&
+  //   ethereumNode.isGeth &&
+  //   !ethereumNode.isDevNetwork
+  // ) {
+  //   devToolsMenu.push({
+  //     label: 'Sync with Light client (beta)',
+  //     enabled: true,
+  //     checked: ethereumNode.isLightMode,
+  //     type: 'checkbox',
+  //     click() {
+  //       restartNode('geth', null, ethereumNode.isLightMode ? 'fast' : 'light');
+  //     }
+  //   });
+  // }
 
   // Enables mining menu: only in Solo mode and Ropsten network (testnet)
   if (
@@ -688,21 +668,21 @@ let menuTempl = function(webviews) {
   }
   helpMenu.push(
     {
-      label: i18n.t('mist.applicationMenu.help.mistWiki'),
+      label: i18n.t('mist.applicationMenu.help.discord'),
       click() {
-        shell.openExternal('https://github.com/ethereum/mist/wiki');
+        shell.openExternal('https://discord.gg/rVzc4aV');
       }
     },
     {
-      label: i18n.t('mist.applicationMenu.help.gitter'),
+      label: i18n.t('mist.applicationMenu.help.reddit'),
       click() {
-        shell.openExternal('https://gitter.im/ethereum/mist');
+        shell.openExternal('https://www.reddit.com/r/ethersocial');
       }
     },
     {
       label: i18n.t('mist.applicationMenu.help.reportBug'),
       click() {
-        shell.openExternal('https://github.com/ethereum/mist/issues');
+        shell.openExternal('https://github.com/ethersocial/esn-mist/issues');
       }
     }
   );
