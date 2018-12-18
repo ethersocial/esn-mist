@@ -1,15 +1,15 @@
 {
     "clients": {
         "Geth": {
-            "version": "0.3.9",
+            "version": "0.3.10",
             "platforms": {
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-darwin-amd64-0.3.9-7075145.tar.gz",
+                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-darwin-amd64-0.3.10-674cc9b.tar.gz",
                             "type": "tar",
-                            "md5": "a0816b676319c5022f24f0dec0b9663b",
-                            "bin": "geth-darwin-amd64-0.3.9-7075145/geth"
+                            "md5": "76a131c76125081ec9b2715d327f8f71",
+                            "bin": "geth-darwin-amd64-0.3.10-674cc9b/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -19,7 +19,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "0.3.9"
+                                    "0.3.10"
                                 ]
                             }
                         }
@@ -28,10 +28,10 @@
                 "linux": {
                     "ia32": {
                         "download": {
-                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-linux-386-0.3.9-7075145.tar.gz",
+                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-linux-386-0.3.10-674cc9b.tar.gz",
                             "type": "tar",
-                            "md5": "2cc2397b27a2d3cc4b6f7b505e46a2da",
-                            "bin": "geth-linux-386-0.3.9-7075145/geth"
+                            "md5": "9b628bab5f04b1ef11f20514af2946c1",
+                            "bin": "geth-linux-386-0.3.10-674cc9b/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -41,17 +41,17 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "0.3.9"
+                                    "0.3.10"
                                 ]
                             }
                         }
                     },
                     "x64": {
                         "download": {
-                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-linux-amd64-0.3.9-7075145.tar.gz",
+                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-linux-amd64-0.3.10-674cc9b.tar.gz",
                             "type": "tar",
-                            "md5": "3f894f189fb1e7cd0c2833a81c0e105f",
-                            "bin": "geth-linux-amd64-0.3.9-7075145/geth"
+                            "md5": "7b5d139140a660b894d593192ee39371",
+                            "bin": "geth-linux-amd64-0.3.10-674cc9b/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -61,7 +61,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "0.3.9"
+                                    "0.3.10"
                                 ]
                             }
                         }
@@ -70,10 +70,10 @@
                 "win": {
                     "ia32": {
                         "download": {
-                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-windows-386-0.3.9-7075145.zip",
+                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-windows-386-0.3.10-674cc9b.zip",
                             "type": "zip",
-                            "md5": "89fba6d155768d98f450ea6f39d45b3e",
-                            "bin": "geth-windows-386-0.3.9-7075145\\geth.exe"
+                            "md5": "f112ad944e68b69b2dc2b079ef07e5fe",
+                            "bin": "geth-windows-386-0.3.10-674cc9b\\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -83,17 +83,17 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "0.3.9"
+                                    "0.3.10"
                                 ]
                             }
                         }
                     },
                     "x64": {
                         "download": {
-                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-windows-amd64-0.3.9-7075145.zip",
+                            "url": "https://gesnstore.blob.core.windows.net/builds/geth-windows-amd64-0.3.10-674cc9b.zip",
                             "type": "zip",
-                            "md5": "989484f7eb4fd611a8054e7b5d5b686e",
-                            "bin": "geth-windows-amd64-0.3.9-7075145\\geth.exe"
+                            "md5": "000b3dc80859e970f46c0c102daa74df",
+                            "bin": "geth-windows-amd64-0.3.10-674cc9b\\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -103,7 +103,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "0.3.9"
+                                    "0.3.10"
                                 ]
                             }
                         }
